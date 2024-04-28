@@ -1,7 +1,14 @@
-import { Flex, Box, Text, Container, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Text,
+  Container,
+  Image,
+  CircularProgress,
+  CircularProgressLabel,
+} from "@chakra-ui/react";
 import { useState } from "react";
 import { CreditCat, PendingCat } from "./Categories";
-
 
 function CustomTabs() {
   const [activeTab, setActiveTab] = useState(2);
@@ -62,26 +69,28 @@ function CustomTabs() {
                   border={"10px solid #0466C866"}
                   rounded={"100%"}
                   h={"150px"}
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
                 >
-                  <Box
-                    w={"131.5px"}
-                    borderWidth="10px"
-                    borderRadius="25px 25px 0 0" // Top left and top right corners rounded, bottom corners are not
-                    borderColor="#0466C8 transparent transparent transparent"
-                    rounded={"100%"}
-                    h={"131.5px"}
-                    display={"flex"}
-                    justifyContent={"center"}
-                    alignItems={"center"}
+                  <CircularProgress
+                    value={49}
+                    capIsRound
+                    color="#0466C8"
+                    size="150px"
+                    thickness={5}
+                    trackColor="#ffffff"
                   >
-                    <Text
-                      color={"#"}
-                      fontFamily={"Circular Std Black"}
-                      fontSize={"36px"}
-                    >
-                      49%
-                    </Text>
-                  </Box>
+                    <CircularProgressLabel>
+                      <Text
+                        color={"#0466C8"}
+                        fontFamily={"Circular Std Black"}
+                        fontSize={"36px"}
+                      >
+                        49%
+                      </Text>
+                    </CircularProgressLabel>
+                  </CircularProgress>
                 </Box>
               </Box>
 
@@ -129,9 +138,9 @@ function CustomTabs() {
                 >
                   Category Breakdown
                 </Text>
-                <Flex direction={'column'} gap={5}>
-                    <PendingCat />
-                    <CreditCat />
+                <Flex direction={"column"} gap={5}>
+                  <PendingCat />
+                  <CreditCat />
                 </Flex>
               </Box>
             </Container>

@@ -18,6 +18,7 @@ const Home: React.FC = () => {
       height={"100vh"}
       paddingX={5}
       paddingY={10}
+      width={'100vw'}
     >
       <Text
         fontWeight={700}
