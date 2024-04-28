@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('./fonts/CircularStd-Book.otf') format('truetype');
+    /* Add more src declarations for different font formats if needed */
+  }
+@font-face {
+    font-family: 'Circular Std';
+    src: url('./fonts/CircularStd-Medium.otf') format('truetype');
+    /* Add more src declarations for different font formats if needed */
+  }
+  @font-face {
+    font-family: 'Circular Std Black';
+    src: url('./fonts/CircularStd-Black.otf') format('opentype');
+    /* Add more src declarations for different font formats if needed */
+  }
+  
+  @font-face {
+    font-family: 'Circular Std Bold';
+    src: url('./fonts/CircularStd-Bold.otf') format('opentype');
+    /* Add more src declarations for different font formats if needed */
+  }
+  
+  /* Optionally, specify the font for specific elements */
+  body {
+    font-family: 'Circular Std', sans-serif;
+  }
+
+  [data-chakra-component="CTab"][aria-selected="true"] {
+    border-bottom: 2px solid blue;
+  }
