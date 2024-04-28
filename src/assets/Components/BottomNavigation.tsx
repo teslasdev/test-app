@@ -12,7 +12,7 @@ const BottomNavigation: React.FC = () => {
 
   return (
     <Flex
-      bg={colorMode === "light" ? "white.100" : "gray.800"}
+      bg={colorMode === "light" ? "white" : "gray.800"}
       p="4"
       justify="space-around"
       align="center"
